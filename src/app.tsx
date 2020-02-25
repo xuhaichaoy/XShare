@@ -11,7 +11,9 @@ import './app.less'
 
 class App extends Component {
 
-  componentDidMount () {}
+  componentDidMount () {
+    console.log(123123)
+  }
 
   componentDidShow () {}
 

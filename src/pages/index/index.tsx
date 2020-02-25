@@ -1,4 +1,6 @@
 import Taro, { Component, Config } from '@tarojs/taro'
+import { AtButton } from 'taro-ui'
+import 'taro-ui/dist/style/index.scss'
 import { View, Text } from '@tarojs/components'
 import './index.less'
 
@@ -28,7 +30,8 @@ export default class Index extends Component {
   render () {
     return (
       <View className='index'>
-        <Text>Hello world!</Text>
+        <View  style={{ textAlign: "center" }}><Text>Hello world!</Text></View> 
+        <AtButton type='primary'>按钮文案</AtButton>
       </View>
     )
   }
