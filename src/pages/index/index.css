@@ -4,7 +4,6 @@
   left: 0;
   z-index: 10;
 }
-
 .hctabs {
   height: calc(100vh - 170px);
   overflow: auto;

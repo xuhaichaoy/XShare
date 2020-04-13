@@ -1,22 +1,17 @@
 import Taro, { Component, Config } from '@tarojs/taro'
-import { AtSearchBar, AtTabs, AtTabsPane, AtTabBar } from 'taro-ui'
+import { AtSearchBar, AtTabs, AtTabsPane } from 'taro-ui'
 import 'taro-ui/dist/style/index.scss'
 import { View } from '@tarojs/components'
-import './index.less'
-
-import Hot from '../hot/hot'
-import Find from '../find/find'
-import Topic from '../topic/topic'
+import './find.less'
 
 
-export default class Index extends Component {
+export default class Home extends Component {
 
   constructor() {
     super(...arguments)
     this.state = {
       value: '',
       current: 1,
-      pageIndex: 0,
     }
   }
 
@@ -44,12 +39,6 @@ export default class Index extends Component {
     })
   }
 
-  pageChange(value) {
-    this.setState({
-      pageIndex: value
-    })
-  }
-
   /**
    * 指定config的类型声明为: Taro.Config
    *
@@ -70,37 +59,18 @@ export default class Index extends Component {
           onChange={this.onChange.bind(this)}
           className='searchBar'
         />
-        <AtTabs current={this.state.current} tabList={tabList} onClick={this.handleClick.bind(this)} >
-          <AtTabsPane className='hctabs' current={this.state.current} index={0} >
-            <View>
-              <Hot />
-            </View>
+        <AtTabs current={this.state.current} tabList={tabList} onClick={this.handleClick.bind(this)}>
+          <AtTabsPane current={this.state.current} index={0} >
+            <View style='padding: 100px 50px;background-color: #FAFBFC;text-align: center;' >标签页一的内容</View>
           </AtTabsPane>
-          <AtTabsPane className='hctabs' current={this.state.current} index={1}>
-            <View>
-              <Find />
-            </View>
+          <AtTabsPane current={this.state.current} index={1}>
+            <View style='padding: 100px 50px;background-color: #FAFBFC;text-align: center;'>标签页二的内容</View>
           </AtTabsPane>
-          <AtTabsPane className='hctabs' current={this.state.current} index={2}>
-            <View>
-              <Topic />
-            </View>
+          <AtTabsPane current={this.state.current} index={2}>
+            <View style='padding: 100px 50px;background-color: #FAFBFC;text-align: center;'>标签页三的内容</View>
           </AtTabsPane>
         </AtTabs>
-        <AtTabBar
-          fixed
-          tabList={[
-            { title: '', iconType: 'home' },
-            { title: '', iconType: 'message' },
-            { title: '', iconType: 'add' },
-            { title: '', iconType: 'tags' },
-            { title: '', iconType: 'user', }
-          ]}
-          onClick={this.pageChange.bind(this)}
-          current={this.state.pageIndex}
-        />
       </View>
     )
   }
 }
-0
