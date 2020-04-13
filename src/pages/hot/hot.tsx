@@ -1,9 +1,9 @@
 import Taro, { Component, Config } from '@tarojs/taro'
-import { AtSearchBar, AtTabs, AtTabsPane } from 'taro-ui'
 import 'taro-ui/dist/style/index.scss'
 import { View } from '@tarojs/components'
-import './hot.less'
 import { AtList, AtListItem, AtCard } from "taro-ui"
+import './hot.less'
+
 
 
 export default class Home extends Component {
@@ -33,7 +33,7 @@ export default class Home extends Component {
    * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
    */
   config: Config = {
-    navigationBarTitleText: '首页'
+    navigationBarTitleText: '热门'
   }
 
   render() {
@@ -42,130 +42,130 @@ export default class Home extends Component {
       <View>
         <AtCard
           note='小Tips'
-          extra='额外信息'
+          isFull=false
           title='这是个标题'
           thumb='http://www.logoquan.com/upload/list/20180421/logoquan15259400209.PNG'
-          className='cards'
+          className='hcCards'
         >
           这也是内容区 可以随意定义功能
-          </AtCard>
+        </AtCard>
         <AtCard
           note='小Tips'
-          extra='额外信息'
+          isFull=false
           title='这是个标题'
           thumb='http://www.logoquan.com/upload/list/20180421/logoquan15259400209.PNG'
-          className='cards'
+          className='hcCards'
         >
           这也是内容区 可以随意定义功能
-          </AtCard>
+        </AtCard>
         <AtCard
           note='小Tips'
-          extra='额外信息'
+          isFull=false
           title='这是个标题'
           thumb='http://www.logoquan.com/upload/list/20180421/logoquan15259400209.PNG'
-          className='cards'
+          className='hcCards'
         >
           这也是内容区 可以随意定义功能
-          </AtCard>
+        </AtCard>
         <AtCard
           note='小Tips'
-          extra='额外信息'
+          isFull=false
           title='这是个标题'
           thumb='http://www.logoquan.com/upload/list/20180421/logoquan15259400209.PNG'
-          className='cards'
+          className='hcCards'
         >
           这也是内容区 可以随意定义功能
-          </AtCard>
+        </AtCard>
         <AtCard
           note='小Tips'
-          extra='额外信息'
+          isFull=false
           title='这是个标题'
           thumb='http://www.logoquan.com/upload/list/20180421/logoquan15259400209.PNG'
-          className='cards'
+          className='hcCards'
         >
           这也是内容区 可以随意定义功能
-          </AtCard>
+        </AtCard>
         <AtCard
           note='小Tips'
-          extra='额外信息'
+          isFull=false
           title='这是个标题'
           thumb='http://www.logoquan.com/upload/list/20180421/logoquan15259400209.PNG'
-          className='cards'
+          className='hcCards'
         >
           这也是内容区 可以随意定义功能
-          </AtCard>
+        </AtCard>
         <AtCard
           note='小Tips'
-          extra='额外信息'
+          isFull=false
           title='这是个标题'
           thumb='http://www.logoquan.com/upload/list/20180421/logoquan15259400209.PNG'
-          className='cards'
+          className='hcCards'
         >
           这也是内容区 可以随意定义功能
-          </AtCard>
+        </AtCard>
         <AtCard
           note='小Tips'
-          extra='额外信息'
+          isFull=false
           title='这是个标题'
           thumb='http://www.logoquan.com/upload/list/20180421/logoquan15259400209.PNG'
-          className='cards'
+          className='hcCards'
         >
           这也是内容区 可以随意定义功能
-          </AtCard>
+        </AtCard>
         <AtCard
           note='小Tips'
-          extra='额外信息'
+          isFull=false
           title='这是个标题'
           thumb='http://www.logoquan.com/upload/list/20180421/logoquan15259400209.PNG'
-          className='cards'
+          className='hcCards'
         >
           这也是内容区 可以随意定义功能
-          </AtCard>
+        </AtCard>
         <AtCard
           note='小Tips'
-          extra='额外信息'
+          isFull=false
           title='这是个标题'
           thumb='http://www.logoquan.com/upload/list/20180421/logoquan15259400209.PNG'
-          className='cards'
+          className='hcCards'
         >
           这也是内容区 可以随意定义功能
-          </AtCard>
+        </AtCard>
         <AtCard
           note='小Tips'
-          extra='额外信息'
+          isFull=false
           title='这是个标题'
           thumb='http://www.logoquan.com/upload/list/20180421/logoquan15259400209.PNG'
-          className='cards'
+          className='hcCards'
         >
           这也是内容区 可以随意定义功能
-          </AtCard>
+        </AtCard>
         <AtCard
           note='小Tips'
-          extra='额外信息'
+          isFull=false
           title='这是个标题'
           thumb='http://www.logoquan.com/upload/list/20180421/logoquan15259400209.PNG'
-          className='cards'
+          className='hcCards'
         >
           这也是内容区 可以随意定义功能
-          </AtCard>
+        </AtCard>
         <AtCard
           note='小Tips'
-          extra='额外信息'
+          isFull=false
           title='这是个标题'
           thumb='http://www.logoquan.com/upload/list/20180421/logoquan15259400209.PNG'
-          className='cards'
+          className='hcCards'
         >
           这也是内容区 可以随意定义功能
-          </AtCard>
+        </AtCard>
         <AtCard
           note='小Tips'
-          extra='额外信息'
+          isFull=false
           title='这是个标题'
           thumb='http://www.logoquan.com/upload/list/20180421/logoquan15259400209.PNG'
-          className='cards'
+          className='hcCards'
         >
           这也是内容区 可以随意定义功能
-          </AtCard>
+        </AtCard>
       </View>
     )
   }

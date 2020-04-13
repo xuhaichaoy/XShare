@@ -15,7 +15,7 @@ export default class Index extends Component {
     super(...arguments)
     this.state = {
       value: '',
-      current: 1,
+      current: 0,
       pageIndex: 0,
     }
   }
