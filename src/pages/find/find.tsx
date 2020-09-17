@@ -61,7 +61,7 @@ export default class Home extends Component {
         />
         <AtTabs current={this.state.current} tabList={tabList} onClick={this.handleClick.bind(this)}>
           <AtTabsPane current={this.state.current} index={0} >
-            <View style='padding: 100px 50px;background-color: #FAFBFC;text-align: center;' >标签页一的内容</View>
+            <View style='padding: 100px 50px;background-color: #FAFBFC;text-align: center;'>标签页一的内容</View>
           </AtTabsPane>
           <AtTabsPane current={this.state.current} index={1}>
             <View style='padding: 100px 50px;background-color: #FAFBFC;text-align: center;'>标签页二的内容</View>

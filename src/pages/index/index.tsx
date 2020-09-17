@@ -1,12 +1,11 @@
 import Taro, { Component, Config } from '@tarojs/taro'
-import { AtSearchBar, AtTabs, AtTabsPane, AtTabBar } from 'taro-ui'
+import { AtTabBar,AtList, AtListItem } from 'taro-ui'
 import 'taro-ui/dist/style/index.scss'
-import { View } from '@tarojs/components'
+import { View, Image  } from '@tarojs/components'
 import './index.less'
 
 import Hot from '../hot/hot'
-import Find from '../find/find'
-import Topic from '../topic/topic'
+
 
 
 export default class Index extends Component {
@@ -14,8 +13,6 @@ export default class Index extends Component {
   constructor() {
     super(...arguments)
     this.state = {
-      value: '',
-      current: 0,
       pageIndex: 0,
     }
   }
@@ -31,18 +28,6 @@ export default class Index extends Component {
 
   componentDidHide() { }
 
-  onChange(value) {
-    this.setState({
-      value: value
-    })
-    console.log(value)
-  }
-
-  handleClick(value) {
-    this.setState({
-      current: value
-    })
-  }
 
   pageChange(value) {
     this.setState({
@@ -62,31 +47,122 @@ export default class Index extends Component {
   }
 
   render() {
-    const tabList = [{ title: '热门' }, { title: '发现' }, { title: '话题' }]
     return (
       <View className='index'>
-        <AtSearchBar
-          value={this.state.value}
-          onChange={this.onChange.bind(this)}
-          className='searchBar'
-        />
-        <AtTabs current={this.state.current} tabList={tabList} onClick={this.handleClick.bind(this)} >
-          <AtTabsPane className='hctabs' current={this.state.current} index={0} >
-            <View>
-              <Hot />
+        <View className='indexBanner'>
+          <View className='bannerTips'>满怀激情地投入到对事理的探究中来，至于建筑变成了自然而然的结果。</View>
+          <View className='bannerBottom'>
+            <View className='at-col'>
+              <View className='bannerWeekday'>Sun</View>
+              <View className='bannerDay'>7</View>
+              <View></View>
             </View>
-          </AtTabsPane>
-          <AtTabsPane className='hctabs' current={this.state.current} index={1}>
-            <View>
-              <Find />
+            <View className='at-col'>
+              <View className='bannerWeekday'>Sun</View>
+              <View className='bannerDay'>7</View>
+              <View></View>
             </View>
-          </AtTabsPane>
-          <AtTabsPane className='hctabs' current={this.state.current} index={2}>
-            <View>
-              <Topic />
+            <View className='at-col'>
+              <View className='bannerWeekday'>Sun</View>
+              <View className='bannerDay'>7</View>
+              <View></View>
             </View>
-          </AtTabsPane>
-        </AtTabs>
+            <View className='at-col'>
+              <View className='bannerWeekday'>Sun</View>
+              <View className='bannerDay'>7</View>
+              <View></View>
+            </View>
+            <View className='at-col'>
+              <View className='bannerWeekday'>Sun</View>
+              <View className='bannerDay'>7</View>
+              <View></View>
+            </View>
+            <View className='at-col'>
+              <View className='bannerWeekday'>Sun</View>
+              <View className='bannerDay'>7</View>
+              <View></View>
+            </View>
+            <View className='at-col'>
+              <View className='bannerWeekday'>Sun</View>
+              <View className='bannerDay'>7</View>
+              <View></View>
+            </View>
+          </View>
+        </View>
+
+        <View className='indexFunction'>
+          <View className='at-col at-col-4'>
+            <Image
+              style='width: 300px;height: 100px;background: #fff;'
+              src='https://camo.githubusercontent.com/3e1b76e514b895760055987f164ce6c95935a3aa/687474703a2f2f73746f726167652e333630627579696d672e636f6d2f6d74642f686f6d652f6c6f676f2d3278313531333833373932363730372e706e67'
+            />
+            <View>心跳表白</View>
+          </View>
+          <View className='at-col at-col-4'>
+            <Image
+              style='width: 300px;height: 100px;background: #fff;'
+              src='https://camo.githubusercontent.com/3e1b76e514b895760055987f164ce6c95935a3aa/687474703a2f2f73746f726167652e333630627579696d672e636f6d2f6d74642f686f6d652f6c6f676f2d3278313531333833373932363730372e706e67'
+            />
+            <View>心跳表白</View>
+          </View>
+          <View className='at-col at-col-4'>
+            <Image
+              style='width: 300px;height: 100px;background: #fff;'
+              src='https://camo.githubusercontent.com/3e1b76e514b895760055987f164ce6c95935a3aa/687474703a2f2f73746f726167652e333630627579696d672e636f6d2f6d74642f686f6d652f6c6f676f2d3278313531333833373932363730372e706e67'
+            />
+            <View>心跳表白</View>
+          </View>
+          <View className='at-col at-col-4'>
+            <Image
+              style='width: 300px;height: 100px;background: #fff;'
+              src='https://camo.githubusercontent.com/3e1b76e514b895760055987f164ce6c95935a3aa/687474703a2f2f73746f726167652e333630627579696d672e636f6d2f6d74642f686f6d652f6c6f676f2d3278313531333833373932363730372e706e67'
+            />
+            <View>心跳表白</View>
+          </View>
+          <View className='at-col at-col-4'>
+            <Image
+              style='width: 300px;height: 100px;background: #fff;'
+              src='https://camo.githubusercontent.com/3e1b76e514b895760055987f164ce6c95935a3aa/687474703a2f2f73746f726167652e333630627579696d672e636f6d2f6d74642f686f6d652f6c6f676f2d3278313531333833373932363730372e706e67'
+            />
+            <View>心跳表白</View>
+          </View>
+          <View className='at-col at-col-4'>
+            <Image
+              style='width: 300px;height: 100px;background: #fff;'
+              src='https://camo.githubusercontent.com/3e1b76e514b895760055987f164ce6c95935a3aa/687474703a2f2f73746f726167652e333630627579696d672e636f6d2f6d74642f686f6d652f6c6f676f2d3278313531333833373932363730372e706e67'
+            />
+            <View>心跳表白</View>
+          </View>
+        </View>
+
+        <View className='todayTask'>
+          <View className='taskTitle'>今日任务</View>
+          <View className='taskMine'>
+            <View>我的发布</View>
+            <View>+添加</View>
+          </View>
+          <View>
+            <AtList>
+              <AtListItem
+                title='标题文字'
+                note='描述信息'
+                arrow='right'
+                iconInfo={{ size: 25, color: '#78A4FA', value: 'calendar', }}
+              />
+              <AtListItem
+                title='标题文字'
+                note='描述信息'
+                extraText='详细信息'
+                arrow='right'
+                iconInfo={{ size: 25, color: '#FF4949', value: 'bookmark', }}
+              />
+            </AtList>
+          </View>
+
+        </View>
+
+
+
         <AtTabBar
           fixed
           tabList={[
@@ -103,4 +179,4 @@ export default class Index extends Component {
     )
   }
 }
-0
+
