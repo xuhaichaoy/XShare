@@ -1,7 +1,7 @@
 import Taro, { Component, Config } from '@tarojs/taro'
-import { AtTabBar,AtList, AtListItem, AtGrid } from 'taro-ui'
+import { AtTabBar, AtList, AtListItem, AtGrid } from 'taro-ui'
 import 'taro-ui/dist/style/index.scss'
-import { View, Image  } from '@tarojs/components'
+import { View, Image } from '@tarojs/components'
 import './index.less'
 
 
@@ -19,6 +19,8 @@ import "taro-ui/dist/style/components/list.scss";
 import "taro-ui/dist/style/components/tab-bar.scss";
 // eslint-disable-next-line import/first
 import "taro-ui/dist/style/components/badge.scss";
+// 接口请求
+import api from '../../config/http'
 
 
 export default class Index extends Component {
@@ -32,7 +34,12 @@ export default class Index extends Component {
   }
 
 
-  componentWillMount() { }
+  componentWillMount() {
+    // console.log(api)
+    api.getData('', function(res) {
+      console.log(res)
+    })
+  }
 
   componentDidMount() { }
 
