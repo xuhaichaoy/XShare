@@ -1,0 +1,60 @@
+.list {
+  padding-bottom: 30PX;
+}
+.list .listItem {
+  background-color: #f8f8f8;
+  width: 346PX;
+  margin: 0 auto;
+  margin-top: 10PX;
+  border-radius: 10PX;
+  background-color: #ffffff;
+  color: #101010;
+  font-size: 14PX;
+  text-align: center;
+  box-shadow: 0px 2px 2px 0px #b8b8b8;
+  font-family: Arial;
+  border: 1PX solid #f9fbfc;
+  padding: 16PX 14PX;
+  box-sizing: border-box;
+}
+.list .listItem .listName {
+  height: 22PX;
+  color: #101010;
+  font-size: 16PX;
+  text-align: left;
+  font-family: PingFangSC-bold;
+  display: block;
+  margin-bottom: 14PX;
+}
+.list .listItem .listItemContentBox {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+.list .listItem .listItemContentBox .listBoxItem .listBoxItemTips {
+  width: 190PX;
+  color: #101010;
+  font-size: 14PX;
+  text-align: justify;
+  font-family: PingFangSC-regular;
+  line-height: 18PX;
+  display: block;
+  overflow: hidden;
+}
+.list .listItem .listItemContentBox .listBoxItem .listBoxTime {
+  width: 74PX;
+  height: 16PX;
+  color: #d8d8d8;
+  font-size: 12PX;
+  text-align: left;
+  font-family: PingFangSC-regular;
+  display: block;
+  margin-top: 4PX;
+  line-height: 16PX;
+}
+.list .listItem .listItemContentBox .listBoxItem .listBoxImage {
+  display: block;
+  width: 88PX;
+  height: 72PX;
+  border-radius: 6PX;
+}

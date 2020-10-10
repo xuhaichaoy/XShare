@@ -1,7 +1,6 @@
 import Taro, { Component, Config } from '@tarojs/taro'
-import { AtSearchBar, AtTabs, AtTabsPane } from 'taro-ui'
 import 'taro-ui/dist/style/index.scss'
-import { View } from '@tarojs/components'
+import { View, Text, Image } from '@tarojs/components'
 import './find.less'
 
 
@@ -10,13 +9,13 @@ export default class Home extends Component {
   constructor() {
     super(...arguments)
     this.state = {
-      value: '',
-      current: 1,
     }
   }
 
 
-  componentWillMount() { }
+  componentWillMount() {
+    console.log(222222222222)
+  }
 
   componentDidMount() { }
 
@@ -26,18 +25,7 @@ export default class Home extends Component {
 
   componentDidHide() { }
 
-  onChange(value) {
-    this.setState({
-      value: value
-    })
-    console.log(value)
-  }
 
-  handleClick(value) {
-    this.setState({
-      current: value
-    })
-  }
 
   /**
    * 指定config的类型声明为: Taro.Config
@@ -51,25 +39,281 @@ export default class Home extends Component {
   }
 
   render() {
-    const tabList = [{ title: '热门' }, { title: '发现' }, { title: '话题' }]
     return (
-      <View className='index'>
-        <AtSearchBar
-          value={this.state.value}
-          onChange={this.onChange.bind(this)}
-          className='searchBar'
-        />
-        <AtTabs current={this.state.current} tabList={tabList} onClick={this.handleClick.bind(this)}>
-          <AtTabsPane current={this.state.current} index={0} >
-            <View style='padding: 100px 50px;background-color: #FAFBFC;text-align: center;'>标签页一的内容</View>
-          </AtTabsPane>
-          <AtTabsPane current={this.state.current} index={1}>
-            <View style='padding: 100px 50px;background-color: #FAFBFC;text-align: center;'>标签页二的内容</View>
-          </AtTabsPane>
-          <AtTabsPane current={this.state.current} index={2}>
-            <View style='padding: 100px 50px;background-color: #FAFBFC;text-align: center;'>标签页三的内容</View>
-          </AtTabsPane>
-        </AtTabs>
+      <View className='list'>
+
+        <View className='listItem'>
+          <Text className='listName'>跳蚤市场出售</Text>
+          <View className='listItemContentBox'>
+            <View className='listBoxItem'>
+              <Text className='listBoxItemTips'>给闺蜜征友 她是个善良有爱心体贴漂亮的人 希望找到一个成熟聊的来的人</Text>
+              <Text className='listBoxTime'>2021-03-08</Text>
+            </View>
+            <View className='listBoxItem'>
+              <Image
+                className='listBoxImage'
+                src='http://pic.cgyouxi.com/orange/title/2083ddb939ab0a567a97ec3ec18279f3_12.jpg'
+              />
+            </View>
+          </View>
+        </View>
+        <View className='listItem'>
+          <Text className='listName'>跳蚤市场出售</Text>
+          <View className='listItemContentBox'>
+            <View className='listBoxItem'>
+              <Text className='listBoxItemTips'>给闺蜜征友 她是个善良有爱心体贴漂亮的人 希望找到一个成熟聊的来的人</Text>
+              <Text className='listBoxTime'>2021-03-08</Text>
+            </View>
+            <View className='listBoxItem'>
+              <Image
+                className='listBoxImage'
+                src='http://pic.cgyouxi.com/orange/title/2083ddb939ab0a567a97ec3ec18279f3_12.jpg'
+              />
+            </View>
+          </View>
+        </View>
+        <View className='listItem'>
+          <Text className='listName'>跳蚤市场出售</Text>
+          <View className='listItemContentBox'>
+            <View className='listBoxItem'>
+              <Text className='listBoxItemTips'>给闺蜜征友 她是个善良有爱心体贴漂亮的人 希望找到一个成熟聊的来的人</Text>
+              <Text className='listBoxTime'>2021-03-08</Text>
+            </View>
+            <View className='listBoxItem'>
+              <Image
+                className='listBoxImage'
+                src='http://pic.cgyouxi.com/orange/title/2083ddb939ab0a567a97ec3ec18279f3_12.jpg'
+              />
+            </View>
+          </View>
+        </View>
+        <View className='listItem'>
+          <Text className='listName'>跳蚤市场出售</Text>
+          <View className='listItemContentBox'>
+            <View className='listBoxItem'>
+              <Text className='listBoxItemTips'>给闺蜜征友 她是个善良有爱心体贴漂亮的人 希望找到一个成熟聊的来的人</Text>
+              <Text className='listBoxTime'>2021-03-08</Text>
+            </View>
+            <View className='listBoxItem'>
+              <Image
+                className='listBoxImage'
+                src='http://pic.cgyouxi.com/orange/title/2083ddb939ab0a567a97ec3ec18279f3_12.jpg'
+              />
+            </View>
+          </View>
+        </View>
+        <View className='listItem'>
+          <Text className='listName'>跳蚤市场出售</Text>
+          <View className='listItemContentBox'>
+            <View className='listBoxItem'>
+              <Text className='listBoxItemTips'>给闺蜜征友 她是个善良有爱心体贴漂亮的人 希望找到一个成熟聊的来的人</Text>
+              <Text className='listBoxTime'>2021-03-08</Text>
+            </View>
+            <View className='listBoxItem'>
+              <Image
+                className='listBoxImage'
+                src='http://pic.cgyouxi.com/orange/title/2083ddb939ab0a567a97ec3ec18279f3_12.jpg'
+              />
+            </View>
+          </View>
+        </View>
+        <View className='listItem'>
+          <Text className='listName'>跳蚤市场出售</Text>
+          <View className='listItemContentBox'>
+            <View className='listBoxItem'>
+              <Text className='listBoxItemTips'>给闺蜜征友 她是个善良有爱心体贴漂亮的人 希望找到一个成熟聊的来的人</Text>
+              <Text className='listBoxTime'>2021-03-08</Text>
+            </View>
+            <View className='listBoxItem'>
+              <Image
+                className='listBoxImage'
+                src='http://pic.cgyouxi.com/orange/title/2083ddb939ab0a567a97ec3ec18279f3_12.jpg'
+              />
+            </View>
+          </View>
+        </View>
+        <View className='listItem'>
+          <Text className='listName'>跳蚤市场出售</Text>
+          <View className='listItemContentBox'>
+            <View className='listBoxItem'>
+              <Text className='listBoxItemTips'>给闺蜜征友 她是个善良有爱心体贴漂亮的人 希望找到一个成熟聊的来的人</Text>
+              <Text className='listBoxTime'>2021-03-08</Text>
+            </View>
+            <View className='listBoxItem'>
+              <Image
+                className='listBoxImage'
+                src='http://pic.cgyouxi.com/orange/title/2083ddb939ab0a567a97ec3ec18279f3_12.jpg'
+              />
+            </View>
+          </View>
+        </View>
+        <View className='listItem'>
+          <Text className='listName'>跳蚤市场出售</Text>
+          <View className='listItemContentBox'>
+            <View className='listBoxItem'>
+              <Text className='listBoxItemTips'>给闺蜜征友 她是个善良有爱心体贴漂亮的人 希望找到一个成熟聊的来的人</Text>
+              <Text className='listBoxTime'>2021-03-08</Text>
+            </View>
+            <View className='listBoxItem'>
+              <Image
+                className='listBoxImage'
+                src='http://pic.cgyouxi.com/orange/title/2083ddb939ab0a567a97ec3ec18279f3_12.jpg'
+              />
+            </View>
+          </View>
+        </View>
+        <View className='listItem'>
+          <Text className='listName'>跳蚤市场出售</Text>
+          <View className='listItemContentBox'>
+            <View className='listBoxItem'>
+              <Text className='listBoxItemTips'>给闺蜜征友 她是个善良有爱心体贴漂亮的人 希望找到一个成熟聊的来的人</Text>
+              <Text className='listBoxTime'>2021-03-08</Text>
+            </View>
+            <View className='listBoxItem'>
+              <Image
+                className='listBoxImage'
+                src='http://pic.cgyouxi.com/orange/title/2083ddb939ab0a567a97ec3ec18279f3_12.jpg'
+              />
+            </View>
+          </View>
+        </View>
+        <View className='listItem'>
+          <Text className='listName'>跳蚤市场出售</Text>
+          <View className='listItemContentBox'>
+            <View className='listBoxItem'>
+              <Text className='listBoxItemTips'>给闺蜜征友 她是个善良有爱心体贴漂亮的人 希望找到一个成熟聊的来的人</Text>
+              <Text className='listBoxTime'>2021-03-08</Text>
+            </View>
+            <View className='listBoxItem'>
+              <Image
+                className='listBoxImage'
+                src='http://pic.cgyouxi.com/orange/title/2083ddb939ab0a567a97ec3ec18279f3_12.jpg'
+              />
+            </View>
+          </View>
+        </View>
+        <View className='listItem'>
+          <Text className='listName'>跳蚤市场出售</Text>
+          <View className='listItemContentBox'>
+            <View className='listBoxItem'>
+              <Text className='listBoxItemTips'>给闺蜜征友 她是个善良有爱心体贴漂亮的人 希望找到一个成熟聊的来的人</Text>
+              <Text className='listBoxTime'>2021-03-08</Text>
+            </View>
+            <View className='listBoxItem'>
+              <Image
+                className='listBoxImage'
+                src='http://pic.cgyouxi.com/orange/title/2083ddb939ab0a567a97ec3ec18279f3_12.jpg'
+              />
+            </View>
+          </View>
+        </View>
+        <View className='listItem'>
+          <Text className='listName'>跳蚤市场出售</Text>
+          <View className='listItemContentBox'>
+            <View className='listBoxItem'>
+              <Text className='listBoxItemTips'>给闺蜜征友 她是个善良有爱心体贴漂亮的人 希望找到一个成熟聊的来的人</Text>
+              <Text className='listBoxTime'>2021-03-08</Text>
+            </View>
+            <View className='listBoxItem'>
+              <Image
+                className='listBoxImage'
+                src='http://pic.cgyouxi.com/orange/title/2083ddb939ab0a567a97ec3ec18279f3_12.jpg'
+              />
+            </View>
+          </View>
+        </View>
+        <View className='listItem'>
+          <Text className='listName'>跳蚤市场出售</Text>
+          <View className='listItemContentBox'>
+            <View className='listBoxItem'>
+              <Text className='listBoxItemTips'>给闺蜜征友 她是个善良有爱心体贴漂亮的人 希望找到一个成熟聊的来的人</Text>
+              <Text className='listBoxTime'>2021-03-08</Text>
+            </View>
+            <View className='listBoxItem'>
+              <Image
+                className='listBoxImage'
+                src='http://pic.cgyouxi.com/orange/title/2083ddb939ab0a567a97ec3ec18279f3_12.jpg'
+              />
+            </View>
+          </View>
+        </View>
+        <View className='listItem'>
+          <Text className='listName'>跳蚤市场出售</Text>
+          <View className='listItemContentBox'>
+            <View className='listBoxItem'>
+              <Text className='listBoxItemTips'>给闺蜜征友 她是个善良有爱心体贴漂亮的人 希望找到一个成熟聊的来的人</Text>
+              <Text className='listBoxTime'>2021-03-08</Text>
+            </View>
+            <View className='listBoxItem'>
+              <Image
+                className='listBoxImage'
+                src='http://pic.cgyouxi.com/orange/title/2083ddb939ab0a567a97ec3ec18279f3_12.jpg'
+              />
+            </View>
+          </View>
+        </View>
+        <View className='listItem'>
+          <Text className='listName'>跳蚤市场出售</Text>
+          <View className='listItemContentBox'>
+            <View className='listBoxItem'>
+              <Text className='listBoxItemTips'>给闺蜜征友 她是个善良有爱心体贴漂亮的人 希望找到一个成熟聊的来的人</Text>
+              <Text className='listBoxTime'>2021-03-08</Text>
+            </View>
+            <View className='listBoxItem'>
+              <Image
+                className='listBoxImage'
+                src='http://pic.cgyouxi.com/orange/title/2083ddb939ab0a567a97ec3ec18279f3_12.jpg'
+              />
+            </View>
+          </View>
+        </View>
+        <View className='listItem'>
+          <Text className='listName'>跳蚤市场出售</Text>
+          <View className='listItemContentBox'>
+            <View className='listBoxItem'>
+              <Text className='listBoxItemTips'>给闺蜜征友 她是个善良有爱心体贴漂亮的人 希望找到一个成熟聊的来的人</Text>
+              <Text className='listBoxTime'>2021-03-08</Text>
+            </View>
+            <View className='listBoxItem'>
+              <Image
+                className='listBoxImage'
+                src='http://pic.cgyouxi.com/orange/title/2083ddb939ab0a567a97ec3ec18279f3_12.jpg'
+              />
+            </View>
+          </View>
+        </View>
+        <View className='listItem'>
+          <Text className='listName'>跳蚤市场出售</Text>
+          <View className='listItemContentBox'>
+            <View className='listBoxItem'>
+              <Text className='listBoxItemTips'>给闺蜜征友 她是个善良有爱心体贴漂亮的人 希望找到一个成熟聊的来的人</Text>
+              <Text className='listBoxTime'>2021-03-08</Text>
+            </View>
+            <View className='listBoxItem'>
+              <Image
+                className='listBoxImage'
+                src='http://pic.cgyouxi.com/orange/title/2083ddb939ab0a567a97ec3ec18279f3_12.jpg'
+              />
+            </View>
+          </View>
+        </View>
+        <View className='listItem'>
+          <Text className='listName'>跳蚤市场出售</Text>
+          <View className='listItemContentBox'>
+            <View className='listBoxItem'>
+              <Text className='listBoxItemTips'>给闺蜜征友 她是个善良有爱心体贴漂亮的人 希望找到一个成熟聊的来的人</Text>
+              <Text className='listBoxTime'>2021-03-08</Text>
+            </View>
+            <View className='listBoxItem'>
+              <Image
+                className='listBoxImage'
+                src='http://pic.cgyouxi.com/orange/title/2083ddb939ab0a567a97ec3ec18279f3_12.jpg'
+              />
+            </View>
+          </View>
+        </View>
+
+
       </View>
     )
   }

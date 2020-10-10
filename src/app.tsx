@@ -12,7 +12,7 @@ import './app.less'
 class App extends Component {
 
   componentDidMount () {
-    console.log(123123)
+    console.log(999999999999)
   }
 
   componentDidShow () {}
@@ -31,6 +31,7 @@ class App extends Component {
   config: Config = {
     pages: [
       'pages/index/index',
+      'pages/find/find'
     ],
     window: {
       backgroundTextStyle: 'light',

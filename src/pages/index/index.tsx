@@ -35,6 +35,7 @@ export default class Index extends Component {
 
 
   componentWillMount() {
+    console.log(11111111111)
     api.getData('', function(res) {
       console.log(res)
     })
@@ -57,6 +58,9 @@ export default class Index extends Component {
 
   atGridClick(item, index) {
     console.log(item, index)
+    Taro.navigateTo({
+		  url: '/pages/find/find'
+		})
   }
 
 
