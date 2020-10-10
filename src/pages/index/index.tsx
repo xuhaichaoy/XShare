@@ -35,7 +35,6 @@ export default class Index extends Component {
 
 
   componentWillMount() {
-    // console.log(api)
     api.getData('', function(res) {
       console.log(res)
     })
@@ -55,6 +54,12 @@ export default class Index extends Component {
       pageIndex: value
     })
   }
+
+  atGridClick(item, index) {
+    console.log(item, index)
+  }
+
+
 
   /**
    * 指定config的类型声明为: Taro.Config
@@ -114,11 +119,11 @@ export default class Index extends Component {
         </View>
 
         <View className='indexFunction'>
-          <AtGrid hasBorder={false} data={
+          <AtGrid hasBorder={false} onClick={this.atGridClick.bind(this)} data={
             [
               {
                 image: 'https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png',
-                value: '心跳表白'
+                value: '心跳表白',
               },
               {
                 image: 'https://img20.360buyimg.com/jdphoto/s72x72_jfs/t15151/308/1012305375/2300/536ee6ef/5a411466N040a074b.png',
