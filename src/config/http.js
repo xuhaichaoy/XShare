@@ -3,7 +3,7 @@ import axios from './axios'
 const api = {
     getData: (params, callback) => {
 
-      axios.post('/ApiController/BsiModelApiController/listBsiModel', params)
+      axios.get('/ApiController/BsiModelApiController/listBsiModel', params)
       .then(res => {
           callback(res)
       })
